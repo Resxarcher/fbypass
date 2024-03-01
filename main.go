@@ -4,6 +4,10 @@ import (
 	"flag"
 )
 
+func bypass(d string) {
+
+}
+
 func main() {
 	var (
 		domain      string
