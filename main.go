@@ -1,7 +1,18 @@
 package main
 
-import "fmt"
+import (
+	"flag"
+)
 
 func main() {
-	fmt.Println("TEST")
+	var (
+		domain      string
+		lists       string
+		concurrency int
+	)
+	flag.StringVar(&domain, "domain", "", "single domain to check")
+	flag.StringVar(&lists, "lists", "", "file path contains domains to check")
+	flag.IntVar(&concurrency, "c", 10, "number of concurrency")
+	flag.Parse()
+
 }
